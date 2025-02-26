@@ -1,0 +1,5 @@
+:- op(500, yfx, tA).
+area(A/B, C) :- HA is A / 2, C is HA * B.
+
+goal_expansion(A/B tA C, area(A/B, C)) :-
+    area(A/B, C).
