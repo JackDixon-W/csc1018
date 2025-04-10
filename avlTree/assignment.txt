@@ -1,0 +1,14 @@
+An AVL tree is a binary tree for which a special condition holds throughout the tree, namely, that at every node the height of the left and right subtrees differ by at most 1. A binary tree can be defined in terms of 2 predicates:
+- empty, the empty binary tree
+- bt(N,T1,T2) that is true if N is the root of a binary tree with left subtree T1 and right subtree T2, where all the items in T1 are less than or equal to N and all the items in T2 are greater than N.
+You have already covered AVL tress in your Data Structures module, but a brief recap is in the attached file.
+
+Write a Prolog program that implements the following predicates for an AVL tree:
+- insert(I,T1,T2) is true if T2 is the AVL tree resulting from I being inserted into an AVL tree T1.
+- display(T) is always true prints the AVL tree to the display. Programs that display the tree in a more "readable" manner will get higher marks.
+
+This is an individual assignment. All the source code for the application, a Word document describing the design of your application and a declaration that this is solely your own work (except elements that are explicitly attributed to another source) must be emailed to david.sinclair(at)dcu.ie by 1000, Monday 14th April 2025.
+
+Submissions without the declaration will not be assessed. This assignment carries 25 marks and late submissions will be penalised 2.5 marks for each 24 hours the assignment is overdue.
+
+All submissions will be actively checked for plagarism and severe penalties will apply.
