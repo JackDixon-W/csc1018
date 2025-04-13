@@ -8,7 +8,7 @@ It includes functions for inserting nodes, checking balance, restoring balance t
 
 % ===== Tree Validation =====
 % Wrapper function to call the traversal function
-bt(N, LT, RT) :- traverseInorder(avl(N, LT, RT)).
+bt(avl(N, LT, RT)) :- traverseInorder(avl(N, LT, RT)).
 
 % Cuts at bottom of traverse
 traverseInorder(empty) :- !.
@@ -82,7 +82,7 @@ balanceCheck(avl(_, L, R)) :-
     abs(DL - DR) =< 1.
 
 % Util function to return balance
-balanceReturn(avl(N, L, R), B) :-
+balanceReturn(avl(_, L, R), B) :-
     height(L, DL),
     height(R, DR),
     B is DL - DR.
@@ -137,6 +137,7 @@ Source: 'https://users.utcluj.ro/%7Ecameliav/lp/lab8.pdf'
 /*
 This is where I encountered issues with the display function
 When importing display/1, it was overwritten by the system predicate of the same name
+ERROR:    No permission to redefine imported_procedure `edinburgh:display/1'
 To resolve this, I had to rename the display function to displayTree/1
 */
 %display(Tree) :- displayTree(Tree).
